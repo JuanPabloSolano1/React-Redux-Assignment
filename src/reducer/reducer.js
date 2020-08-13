@@ -11,8 +11,8 @@ export const reducer = (state = initialState, action) => {
         ...state,
         results: state.results.concat({
           id: Math.ceil(Math.random() * 100),
-          name: 'MAX',
-          age: Math.ceil(Math.random() * 40),
+          name: action.personData.name,
+          age: action.personData.age,
         }),
       };
     case actionType.DELETE_USER:
